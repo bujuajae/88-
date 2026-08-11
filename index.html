@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>88공인중개사사무소 | 진접·왕숙 전문</title>
     <style>
-        /* 기본 리셋 및 모던 디자인 시스템 */
         :root {
-            --primary: #1E3A8A; /* 신뢰감을 주는 딥블루 */
+            --primary: #1E3A8A;
             --accent: #2563EB;
             --bg-light: #F8FAFC;
             --text-dark: #1E293B;
@@ -18,7 +17,7 @@
         body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; padding-bottom: 60px; }
         a { text-decoration: none; color: inherit; }
 
-        /* 상단 헤더 & GNB 메뉴바 */
+        /* 상단 헤더 & GNB */
         header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
         .header-top { max-width: 1000px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 20px; font-weight: 800; color: var(--primary); }
@@ -30,7 +29,7 @@
         .nav-menu li a { display: block; padding: 14px 20px; font-weight: 600; font-size: 15px; color: #64748B; white-space: nowrap; }
         .nav-menu li a:hover { color: var(--primary); border-bottom: 3px solid var(--primary); }
 
-        /* 메인 비주얼 영역 */
+        /* 비주얼 영역 */
         .hero { background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%); color: #fff; padding: 40px 20px; text-align: center; }
         .hero h2 { font-size: 24px; margin-bottom: 10px; font-weight: 700; }
         .hero p { opacity: 0.9; font-size: 15px; margin-bottom: 20px; }
@@ -38,12 +37,12 @@
         .hero-btn { background: #fff; color: var(--primary); padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 14px; }
         .hero-btn.kakao { background: #FEE500; color: #000; }
 
-        /* 컨테이너 및 섹션 */
+        /* 컨테이너 */
         .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
         .section-box { scroll-margin-top: 120px; }
         .section-title { font-size: 18px; font-weight: 700; margin: 30px 0 15px 0; display: flex; justify-content: space-between; align-items: center; }
 
-        /* 매물 카드 그리드 */
+        /* 매물 카드 */
         .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
         .card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; transition: 0.2s; }
         .card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); border-color: var(--accent); }
@@ -51,7 +50,7 @@
         .card-title { font-weight: bold; font-size: 16px; margin-bottom: 5px; color: var(--text-dark); }
         .card-desc { font-size: 13px; color: #64748B; }
 
-        /* 공식 채널 배너 (2열) */
+        /* 채널 배너 */
         .channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
         .channel-box { padding: 20px; border-radius: 12px; color: #fff; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
         .channel-box:hover { opacity: 0.95; transform: translateY(-2px); }
@@ -60,7 +59,7 @@
         .channel-box h3 { font-size: 16px; margin-bottom: 4px; }
         .channel-box p { font-size: 12px; opacity: 0.9; }
 
-        /* 위치 및 정보 카드 */
+        /* 정보 카드 */
         .info-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin-bottom: 30px; }
         .info-list { list-style: none; font-size: 15px; }
         .info-list li { margin-bottom: 10px; color: #475569; }
@@ -71,7 +70,6 @@
         footer { background: #0F172A; color: #94A3B8; padding: 30px 20px; font-size: 13px; text-align: center; line-height: 1.8; margin-top: 40px; }
         footer strong { color: #F1F5F9; }
 
-        /* 모바일 대응 */
         @media (max-width: 600px) {
             .channel-grid { grid-template-columns: 1fr; }
             .hero h2 { font-size: 20px; }
@@ -81,13 +79,12 @@
 </head>
 <body>
 
-    <!-- 헤더 & 전화 연결 -->
+    <!-- 헤더 -->
     <header>
         <div class="header-top">
             <div class="logo">88공인중개사</div>
             <a href="tel:01030525920" class="head-tel">📞 010-3052-5920</a>
         </div>
-        <!-- GNB 메뉴바 -->
         <nav>
             <ul class="nav-menu">
                 <li><a href="#property">매물안내</a></li>
@@ -98,7 +95,7 @@
         </nav>
     </header>
 
-    <!-- 히어로 비주얼 섹션 -->
+    <!-- 메인 비주얼 -->
     <section class="hero">
         <h2>진접지구 · 왕숙신도시 전문 88부동산</h2>
         <p>정확한 시세 분석과 정직한 중개로 최선의 선택을 도와드립니다.</p>
@@ -110,7 +107,7 @@
 
     <div class="container">
 
-        <!-- 1. 매물 안내 카테고리 -->
+        <!-- 1. 매물 안내 -->
         <div id="property" class="section-box">
             <div class="section-title">
                 <span>🏢 카테고리별 매물 안내</span>
@@ -139,7 +136,7 @@
             </div>
         </div>
 
-        <!-- 2. 미디어 및 소통 채널 -->
+        <!-- 2. 미디어 채널 -->
         <div id="channel" class="section-box">
             <div class="section-title">
                 <span>📢 88부동산 공식 미디어 채널</span>
@@ -162,7 +159,7 @@
             </div>
         </div>
 
-        <!-- 3. 핵심 호재 정보 -->
+        <!-- 3. 개발 호재 -->
         <div id="development" class="section-box">
             <div class="section-title">
                 <span>🏗️ 진접·왕숙 핵심 개발 호재</span>
@@ -175,7 +172,7 @@
             </div>
         </div>
 
-        <!-- 4. 찾아오시는 길 (검색 오타가 방지된 지도 연결 링크 적용) -->
+        <!-- 4. 오시는 길 (네이버 지도 주소 타입 파라미터 적용) -->
         <div id="location" class="section-box">
             <div class="section-title">
                 <span>📍 사무실 오시는 길</span>
@@ -187,8 +184,7 @@
                     <li><strong>📞 상담전화:</strong> <a href="tel:01030525920" style="color: var(--accent); font-weight: bold;">010-3052-5920</a></li>
                 </ul>
                 <div class="map-btns">
-                    <!-- 오타 없이 '경기도 남양주시 진접읍 해밀예당1로 30' 주소가 바로 열리는 네이버 지도 URL -->
-                    <a href="https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%83%82%EC%96%91%EC%A3%BC%EC%8B%9C%20%EC%A5%84%EC%A0%91%EC%9D%8D%20%ED%95%B4%EB%B0%80%EC%98%88%EB%8B%B91%EB%A1%9C%2030" target="_blank" class="map-btn" style="background: #03CF5D; color: #fff;">
+                    <a href="https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%83%82%EC%96%91%EC%A3%BC%EC%8B%9C%20%EC%A5%84%EC%A0%91%EC%9D%8D%20%ED%95%B4%EB%B0%80%EC%98%88%EB%8B%B91%EB%A1%9C%2030?type=address" target="_blank" class="map-btn" style="background: #03CF5D; color: #fff;">
                         💚 네이버 지도로 길찾기
                     </a>
                     <a href="https://map.kakao.com/link/search/경기도 남양주시 진접읍 해밀예당1로 30" target="_blank" class="map-btn" style="background: #FEE500; color: #000;">
@@ -200,7 +196,7 @@
 
     </div>
 
-    <!-- 하단 정보 -->
+    <!-- 푸터 -->
     <footer>
         <p><strong>88공인중개사사무소</strong> | 대표: 전용성</p>
         <p>소재지: 경기도 남양주시 진접읍 해밀예당1로 30 | 전화: 010-3052-5920</p>
