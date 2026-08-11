@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>88공인중개사사무소 | 진접·왕숙 전문</title>
     <style>
-        /* 기본 리셋 및 모던 스타일 적용 */
+        /* 기본 리셋 및 모던 디자인 시스템 */
         :root {
             --primary: #1E3A8A; /* 신뢰감을 주는 딥블루 */
             --accent: #2563EB;
@@ -14,184 +14,189 @@
             --border: #E2E8F0;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', -apple-system, sans-serif; }
+        html { scroll-behavior: smooth; }
         body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; padding-bottom: 60px; }
         a { text-decoration: none; color: inherit; }
 
         /* 상단 헤더 & GNB 메뉴바 */
-        header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
         .header-top { max-width: 1000px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 20px; font-weight: 800; color: var(--primary); }
-        .head-tel { background: var(--primary); color: #fff; padding: 8px 16px; border-radius: 20px; font-weight: bold; font-size: 14px; }
+        .head-tel { background: var(--primary); color: #fff; padding: 8px 16px; border-radius: 20px; font-weight: bold; font-size: 14px; transition: 0.2s; }
+        .head-tel:hover { background: var(--accent); }
         
         nav { background: #fff; border-top: 1px solid var(--border); }
         .nav-menu { max-width: 1000px; margin: 0 auto; display: flex; list-style: none; overflow-x: auto; }
         .nav-menu li a { display: block; padding: 14px 20px; font-weight: 600; font-size: 15px; color: #64748B; white-space: nowrap; }
-        .nav-menu li a:hover, .nav-menu li a.active { color: var(--primary); border-bottom: 3px solid var(--primary); }
+        .nav-menu li a:hover { color: var(--primary); border-bottom: 3px solid var(--primary); }
 
-        /* 메인 히어로 섹션 */
+        /* 메인 비주얼 영역 */
         .hero { background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%); color: #fff; padding: 40px 20px; text-align: center; }
         .hero h2 { font-size: 24px; margin-bottom: 10px; font-weight: 700; }
         .hero p { opacity: 0.9; font-size: 15px; margin-bottom: 20px; }
-        .hero-btns { display: flex; justify-content: center; gap: 10px; }
+        .hero-btns { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
         .hero-btn { background: #fff; color: var(--primary); padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 14px; }
         .hero-btn.kakao { background: #FEE500; color: #000; }
 
-        /* 컨테이너 및 섹션 공통 */
+        /* 컨테이너 및 섹션 */
         .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
-        .section-title { font-size: 18px; font-weight: 700; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
-        .section-title a { font-size: 13px; color: #64748B; font-weight: normal; }
+        .section-box { scroll-margin-top: 120px; }
+        .section-title { font-size: 18px; font-weight: 700; margin: 30px 0 15px 0; display: flex; justify-content: space-between; align-items: center; }
 
-        /* 매물 그리드 카드 */
-        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        /* 매물 카드 그리드 */
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
         .card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; transition: 0.2s; }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); border-color: var(--accent); }
         .card-icon { font-size: 32px; margin-bottom: 10px; }
-        .card-title { font-weight: bold; font-size: 16px; margin-bottom: 5px; }
+        .card-title { font-weight: bold; font-size: 16px; margin-bottom: 5px; color: var(--text-dark); }
         .card-desc { font-size: 13px; color: #64748B; }
 
-        /* 외부 채널 배너 (2열) */
-        .channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px; }
-        .channel-box { padding: 20px; border-radius: 12px; color: #fff; display: flex; justify-content: space-between; align-items: center; }
+        /* 공식 채널 배너 (2열) */
+        .channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+        .channel-box { padding: 20px; border-radius: 12px; color: #fff; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
+        .channel-box:hover { opacity: 0.95; transform: translateY(-2px); }
         .bg-blog { background: #03CF5D; }
         .bg-youtube { background: #FF0000; }
         .channel-box h3 { font-size: 16px; margin-bottom: 4px; }
         .channel-box p { font-size: 12px; opacity: 0.9; }
 
-        /* 위치 및 안내 카드 */
-        .info-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin-bottom: 40px; }
-        .info-list { list-style: none; font-size: 14px; margin: 15px 0; }
-        .info-list li { margin-bottom: 8px; color: #475569; }
-        .map-btns { display: flex; gap: 10px; margin-top: 15px; }
-        .map-btn { padding: 10px 16px; border-radius: 6px; font-size: 13px; font-weight: bold; text-align: center; flex: 1; }
+        /* 위치 및 정보 카드 */
+        .info-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin-bottom: 30px; }
+        .info-list { list-style: none; font-size: 15px; }
+        .info-list li { margin-bottom: 10px; color: #475569; }
+        .map-btns { display: flex; gap: 10px; margin-top: 18px; }
+        .map-btn { padding: 12px 16px; border-radius: 8px; font-size: 14px; font-weight: bold; text-align: center; flex: 1; text-decoration: none; }
 
         /* 푸터 */
-        footer { background: #0F172A; color: #94A3B8; padding: 30px 20px; font-size: 13px; text-align: center; line-height: 1.8; }
+        footer { background: #0F172A; color: #94A3B8; padding: 30px 20px; font-size: 13px; text-align: center; line-height: 1.8; margin-top: 40px; }
         footer strong { color: #F1F5F9; }
 
         /* 모바일 대응 */
         @media (max-width: 600px) {
             .channel-grid { grid-template-columns: 1fr; }
             .hero h2 { font-size: 20px; }
+            .map-btns { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 헤더 & 상단 연락처 -->
+    <!-- 헤더 & 전화 연결 -->
     <header>
         <div class="header-top">
             <div class="logo">88공인중개사</div>
-            <a href="tel:01030525920" class="head-tel">📞 전화상담</a>
+            <a href="tel:01030525920" class="head-tel">📞 010-3052-5920</a>
         </div>
         <!-- GNB 메뉴바 -->
         <nav>
             <ul class="nav-menu">
-                <li><a href="#property" class="active">매물안내</a></li>
-                <li><a href="#channel">채널안내</a></li>
+                <li><a href="#property">매물안내</a></li>
+                <li><a href="#channel">공식채널</a></li>
                 <li><a href="#development">지역호재</a></li>
                 <li><a href="#location">오시는길</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 메인 비주얼 영역 -->
+    <!-- 히어로 비주얼 섹션 -->
     <section class="hero">
         <h2>진접지구 · 왕숙신도시 전문 88부동산</h2>
-        <p>정확한 분석과 정직한 중개로 최선의 선택을 도와드립니다.</p>
+        <p>정확한 시세 분석과 정직한 중개로 최선의 선택을 도와드립니다.</p>
         <div class="hero-btns">
-            <a href="tel:01030525920" class="hero-btn">빠른 상담 문의</a>
-            <a href="https://open.kakao.com" target="_blank" class="hero-btn kakao">카카오톡 문의</a>
+            <a href="tel:01030525920" class="hero-btn">📞 전화 상담 문의</a>
+            <a href="https://open.kakao.com" target="_blank" class="hero-btn kakao">💬 카카오톡 문의</a>
         </div>
     </section>
 
     <div class="container">
 
-        <!-- 1. 매물 안내 (카드형 카테고리) -->
-        <section id="property">
+        <!-- 1. 매물 안내 카테고리 -->
+        <div id="property" class="section-box">
             <div class="section-title">
-                <span>🏢 부동산 매물 보기</span>
+                <span>🏢 카테고리별 매물 안내</span>
             </div>
             <div class="grid-cards">
                 <a href="https://blog.naver.com/88jjys111" target="_blank" class="card">
                     <div class="card-icon">🏢</div>
                     <div class="card-title">아파트</div>
-                    <div class="card-desc">진접·왕숙 주요 단지 매물</div>
+                    <div class="card-desc">진접·왕숙 주요 단지 실매물</div>
                 </a>
                 <a href="https://blog.naver.com/88jjys111" target="_blank" class="card">
                     <div class="card-icon">🏪</div>
                     <div class="card-title">상가 · 사무실</div>
-                    <div class="card-desc">핵심 상권 및 임대 수익형</div>
+                    <div class="card-desc">핵심 상권 및 수익형 매물</div>
                 </a>
                 <a href="https://blog.naver.com/88jjys111" target="_blank" class="card">
                     <div class="card-icon">🏞️</div>
                     <div class="card-title">토지 · 임야</div>
-                    <div class="card-desc">투자 및 개발용 토지 정보</div>
+                    <div class="card-desc">투자 및 개발용 토지 브리핑</div>
                 </a>
                 <a href="https://blog.naver.com/88jjys111" target="_blank" class="card">
                     <div class="card-icon">⚡</div>
                     <div class="card-title">분양권 · 급매</div>
-                    <div class="card-desc">실시간 추천 급매물</div>
+                    <div class="card-desc">실시간 추천 급매물 정보</div>
                 </a>
             </div>
-        </section>
+        </div>
 
-        <!-- 2. 미디어 및 채널 연결 -->
-        <section id="channel">
+        <!-- 2. 미디어 및 소통 채널 -->
+        <div id="channel" class="section-box">
             <div class="section-title">
-                <span>📢 88부동산 공식 채널</span>
+                <span>📢 88부동산 공식 미디어 채널</span>
             </div>
             <div class="channel-grid">
                 <a href="https://blog.naver.com/88jjys111" target="_blank" class="channel-box bg-blog">
                     <div>
                         <h3>네이버 공식 블로그</h3>
-                        <p>상세 매물 사진 및 현장 브리핑</p>
+                        <p>상세 매물 사진 및 현장 실시간 브리핑</p>
                     </div>
-                    <span>방문하기 ➔</span>
+                    <span>바로가기 ➔</span>
                 </a>
                 <a href="https://www.youtube.com/@bujuajae" target="_blank" class="channel-box bg-youtube">
                     <div>
                         <h3>부주아재 TV (유튜브)</h3>
-                        <p>부동산 분석 & 주식 이야기</p>
+                        <p>부동산 현장 분석 & 주식 이야기</p>
                     </div>
                     <span>시청하기 ➔</span>
                 </a>
             </div>
-        </section>
+        </div>
 
-        <!-- 3. 핵심 호재 요약 -->
-        <section id="development">
+        <!-- 3. 핵심 호재 정보 -->
+        <div id="development" class="section-box">
             <div class="section-title">
-                <span>🏗️ 진접·왕숙 핵심 호재</span>
+                <span>🏗️ 진접·왕숙 핵심 개발 호재</span>
             </div>
             <div class="info-card">
                 <ul class="info-list">
-                    <li>🚆 <strong>GTX-B 노선 & 왕숙역 신설:</strong> 여의도 및 마곡권역 20분대 접근성 확보</li>
-                    <li>🚇 <strong>지하철 4호선(진접선) & 9호선 연장:</strong> 서울 주요 도심 직결 프리미엄</li>
+                    <li>🚆 <strong>GTX-B 노선 & 왕숙역 신설:</strong> 여의도·마곡 20분대 진입 핵심 교통망</li>
+                    <li>🚇 <strong>지하철 4호선(진접선) & 9호선 연장:</strong> 서울 주요 도심 직결 교통 프리미엄</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
-        <!-- 4. 오시는 길 (주소 및 지도 링크) -->
-        <section id="location">
+        <!-- 4. 찾아오시는 길 (검색 오타가 방지된 지도 연결 링크 적용) -->
+        <div id="location" class="section-box">
             <div class="section-title">
-                <span>📍 사무실 위치 안내</span>
+                <span>📍 사무실 오시는 길</span>
             </div>
             <div class="info-card">
                 <ul class="info-list">
-                    <li><strong>도로명 주소:</strong> 경기도 남양주시 진접읍 해밀예당1로 30</li>
-                    <li><strong>영업시간:</strong> 평일 10:00 ~ 19:00 | 토요일 10:00 ~ 17:00 (일요일 휴무)</li>
-                    <li><strong>대표 전화:</strong> <a href="tel:01030525920" style="color: var(--accent); font-weight: bold;">010-3052-5920</a></li>
+                    <li><strong>📍 주소:</strong> 경기도 남양주시 진접읍 해밀예당1로 30 (88공인중개사사무소)</li>
+                    <li><strong>🕒 영업시간:</strong> 평일 10:00 ~ 19:00 | 토요일 10:00 ~ 17:00 (일요일 휴무)</li>
+                    <li><strong>📞 상담전화:</strong> <a href="tel:01030525920" style="color: var(--accent); font-weight: bold;">010-3052-5920</a></li>
                 </ul>
                 <div class="map-btns">
+                    <!-- 오타 없이 '경기도 남양주시 진접읍 해밀예당1로 30' 주소가 바로 열리는 네이버 지도 URL -->
                     <a href="https://map.naver.com/v5/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%83%82%EC%96%91%EC%A3%BC%EC%8B%9C%20%EC%A5%84%EC%A0%91%EC%9D%8D%20%ED%95%B4%EB%B0%80%EC%98%88%EB%8B%B91%EB%A1%9C%2030" target="_blank" class="map-btn" style="background: #03CF5D; color: #fff;">
-                        💚 네이버 지도
+                        💚 네이버 지도로 길찾기
                     </a>
                     <a href="https://map.kakao.com/link/search/경기도 남양주시 진접읍 해밀예당1로 30" target="_blank" class="map-btn" style="background: #FEE500; color: #000;">
-                        💛 카카오맵
+                        💛 카카오맵으로 길찾기
                     </a>
                 </div>
             </div>
-        </section>
+        </div>
 
     </div>
 
