@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="naver-site-verification" content="331a7de1535e180440c5d8c449b928316d05fbfd" />
     
-    <!-- SEO 및 공유용 메타태그 -->
     <title>진접·왕숙 88부동산 | 실거래가·매물·부주아재 TV</title>
     <meta name="description" content="남양주 진접지구, 왕숙신도시 전문 88공인중개사사무소입니다. 아파트, 상가, 토지 매물 상담 및 부주아재 블로그/유튜브 운영.">
     <meta property="og:type" content="website">
@@ -16,12 +15,12 @@
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a;   /* 메인 블루 */
-            --accent: #d97706;    /* 포인트 오렌지 */
-            --bg-light: #f8fafc;  /* 배경색 */
-            --text-main: #0f172a; /* 본문 텍스트 */
-            --text-sub: #475569;  /* 보조 텍스트 */
-            --border: #e2e8f0;    /* 경계선 */
+            --primary: #1e3a8a;
+            --accent: #d97706;
+            --bg-light: #f8fafc;
+            --text-main: #0f172a;
+            --text-sub: #475569;
+            --border: #e2e8f0;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,7 +32,6 @@
             word-break: keep-all; 
         }
 
-        /* 헤더 디자인 */
         header { 
             background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); 
             color: white; 
@@ -43,10 +41,8 @@
         header h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
         header p { font-size: 15px; color: #cbd5e1; font-weight: 400; }
 
-        /* 메인 컨테이너 */
         .container { max-width: 800px; margin: 0 auto; padding: 0 20px 30px 20px; }
 
-        /* 상단 빠른 상담 버튼 (3개 배치) */
         .cta-box { 
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
@@ -65,14 +61,11 @@
             font-size: 14px; 
             text-decoration: none; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-            transition: transform 0.1s; 
         }
-        .cta-btn:active { transform: scale(0.98); }
         .btn-call { background: #16a34a; color: white; }
         .btn-blog { background: #03cf5d; color: white; }
         .btn-kakao { background: #fee500; color: #000; }
 
-        /* 카드 섹션 공통 */
         .card { 
             background: white; 
             border-radius: 16px; 
@@ -92,7 +85,6 @@
         .card-title { font-size: 19px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; }
         .badge { background: #eff6ff; color: #2563eb; font-size: 12px; padding: 4px 10px; border-radius: 20px; font-weight: 600; }
 
-        /* 카테고리 메뉴 Grid */
         .category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; }
         .category-item { 
             background: var(--bg-light); 
@@ -103,22 +95,17 @@
             color: var(--text-main); 
             font-weight: 600; 
             font-size: 14px; 
-            transition: all 0.2s; 
         }
-        .category-item:hover { background: #e0f2fe; border-color: #38bdf8; }
         .category-icon { font-size: 26px; display: block; margin-bottom: 6px; }
 
-        /* 유튜브 영상 영역 */
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000; }
         .video-container iframe { position: absolute; top:0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        /* 시세 표 디자인 */
         .custom-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14px; }
         .custom-table th { background: var(--bg-light); padding: 12px; text-align: left; font-weight: 700; color: var(--text-sub); border-bottom: 2px solid var(--border); }
         .custom-table td { padding: 14px 12px; border-bottom: 1px solid var(--border); }
         .tag-up { color: #dc2626; font-weight: 700; background: #fef2f2; padding: 3px 8px; border-radius: 4px; font-size: 13px; }
 
-        /* 호재 및 블로그 리스트 */
         .info-list { list-style: none; }
         .info-item { padding: 14px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .info-item:last-child { border-bottom: none; }
@@ -127,14 +114,12 @@
         .tag-subway { background: #e0e7ff; color: #3730a3; }
         .tag-blog { background: #dcfce7; color: #15803d; }
 
-        /* 하단 대표자 및 사업자 정보 */
         footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 35px 20px; font-size: 13px; line-height: 1.8; }
         footer strong { color: white; }
-    </footer>
+    </style>
 </head>
 <body>
 
-    <!-- 헤더 영역 -->
     <header>
         <h1>88공인중개사사무소</h1>
         <p>남양주 진접지구 · 왕숙신도시 전문 매물 분석 포털</p>
@@ -142,7 +127,6 @@
 
     <div class="container">
 
-        <!-- 빠른 전화/블로그/카톡 상담 버튼 -->
         <div class="cta-box">
             <a href="tel:01042205920" class="cta-btn btn-call">
                 <span>📞</span> 전화상담
@@ -155,7 +139,6 @@
             </a>
         </div>
 
-        <!-- 매물 카테고리 -->
         <div class="card">
             <div class="card-header">
                 <div class="card-title">📌 빠른 매물 검색</div>
@@ -177,7 +160,6 @@
             </div>
         </div>
 
-        <!-- 네이버 블로그 추천 채널 카드 -->
         <div class="card">
             <div class="card-header">
                 <div class="card-title">📝 88부동산 네이버 공식 블로그</div>
@@ -194,7 +176,6 @@
             </ul>
         </div>
 
-        <!-- 유튜브 채널 연동 -->
         <div class="card">
             <div class="card-header">
                 <div class="card-title">🎬 부주아재 TV (부동산과 주식을 좋아하는 부주 아재)</div>
@@ -205,7 +186,6 @@
             </div>
         </div>
 
-        <!-- 주요 아파트 실거래가 모니터링 -->
         <div class="card">
             <div class="card-header">
                 <div class="card-title">📊 진접읍 주요 단지 실거래가 현황</div>
@@ -239,7 +219,6 @@
             </table>
         </div>
 
-        <!-- 핵심 호재 카드 -->
         <div class="card">
             <div class="card-header">
                 <div class="card-title">🏗️ 진접·왕숙 핵심 개발 호재</div>
@@ -264,7 +243,6 @@
 
     </div>
 
-    <!-- 하단 업소 정보 -->
     <footer>
         <p><strong>88공인중개사사무소</strong> | 대표: 전용성</p>
         <p>소재지: 경기도 남양주시 진접읍 | 전화: 010-4220-5920</p>
@@ -274,4 +252,3 @@
 
 </body>
 </html>
- 
